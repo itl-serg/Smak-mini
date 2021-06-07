@@ -1,0 +1,158 @@
+body {
+  padding-top: 20px;
+  &:before {
+    z-index: 10001;
+    line-height: 20px;
+    font-weight: bold;
+    text-align: center;
+    position: fixed;
+    font-size: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: limegreen;
+    content: "Xsmall";
+  }
+  @include media-breakpoint-up(sm) {
+    &:before {
+      content: "small";
+      background: #f00;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    font-size: $font-size-base;
+    &:before {
+      content: "middle";
+      background: green;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    &:before {
+      content: "Large";
+      background: turquoise;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    &:before {
+      content: "XLarge";
+      background: #f09;
+    }
+  }
+  @include media-breakpoint-up(xxl) {
+    &:before {
+      content: "XXLarge";
+      background: #90f;
+    }
+  }
+}
+// Main
+.main-wrapper {
+  @include textFont(400, 16px, 25px, $colorDoveGray);
+  background: $backgraundWhite;
+  padding: 60px 0;
+
+  .border-ico {
+    display: block;
+    width: 108px;
+    height: 108px;
+    border: 1px solid $colorWhite;
+    border-radius: 50%;
+    position: relative;
+    margin: 70px auto 20px;
+    color: $colorWhite;
+    background: $backgraundTurbo;
+  }
+  .border-ico:hover {
+    border: 1px solid $colorShark;
+    background: $backgraundWhite;
+    color: $colorTurbo;
+  }
+  .border-ico::before {
+    content: "";
+    background-size: cover;
+    position: absolute;
+    left: calc(50% - 20px);
+  }
+  .web-design::before {
+    background: url("../images/sprite/sprite.svg#web-design") no-repeat;
+    top: calc(50% - 18px);
+    height: 36px;
+    width: 39px;
+  }
+  .graphic-design::before {
+    background: url("../images/sprite/sprite.svg#graphic-design") no-repeat;
+    top: calc(50% - 20px);
+    height: 39px;
+    width: 39px;
+  }
+  .photography::before {
+    background: url("../images/sprite/sprite.svg#photography") no-repeat;
+    top: calc(50% - 16px);
+    left: calc(50% - 17px);
+    height: 32px;
+    width: 39px;
+  }
+  .developing::before {
+    background: url("../images/sprite/sprite.svg#developing") no-repeat;
+    top: calc(50% - 21px);
+    height: 41px;
+    width: 42px;
+  }
+}
+.article-wrapper {
+  @include textFont(400, 16px, 25px, $colorWhite);
+  background: $backgraundBunker;
+  h2.text-color-turbo {
+    color: $colorTurbo;
+    padding: 60px 0;
+  }
+  span {
+    position: relative;
+    display: block;
+    padding-top: 120px;
+    margin-top: 40px;
+  }
+  span:before {
+    content: "";
+    background-size: cover;
+    position: absolute;
+    bottom: 40px;
+  }
+  .analyse::before {
+    background: url("../images/sprite/sprite.svg#analyse") no-repeat;
+    width: 42px;
+    height: 45px;
+    left: calc(50% - 21px);
+  }
+  .preparing::before {
+    background: url("../images/sprite/sprite.svg#preparing") no-repeat;
+    width: 44px;
+    height: 44px;
+    left: calc(50% - 22px);
+  }
+  .working::before {
+    background: url("../images/sprite/sprite.svg#working") no-repeat;
+    width: 45px;
+    height: 42px;
+    left: calc(50% - 23px);
+  }
+  .finalyse::before {
+    background: url("../images/sprite/sprite.svg#finalyse") no-repeat;
+    width: 43px;
+    height: 45px;
+    left: calc(50% - 22px);
+  }
+  .testing::before {
+    background: url("../images/sprite/sprite.svg#testing") no-repeat;
+    width: 39px;
+    height: 42px;
+    left: calc(50% - 20px);
+  }
+  .deliver::before {
+    background: url("../images/sprite/sprite.svg#deliver") no-repeat;
+    width: 45px;
+    height: 36px;
+    left: calc(50% - 23px);
+  }
+}
