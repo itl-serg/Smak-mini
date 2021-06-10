@@ -1,57 +1,57 @@
-body {
-  padding-top: 20px;
-  &:before {
-    z-index: 10001;
-    line-height: 20px;
-    font-weight: bold;
-    text-align: center;
-    position: fixed;
-    font-size: 20px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 20px;
-    background: limegreen;
-    content: "Xsmall";
-  }
-  @include media-breakpoint-up(sm) {
-    &:before {
-      content: "small";
-      background: #f00;
-    }
-  }
-  @include media-breakpoint-up(md) {
-    font-size: $font-size-base;
-    &:before {
-      content: "middle";
-      background: green;
-    }
-  }
-  @include media-breakpoint-up(lg) {
-    &:before {
-      content: "Large";
-      background: turquoise;
-    }
-  }
-  @include media-breakpoint-up(xl) {
-    &:before {
-      content: "XLarge";
-      background: #f09;
-    }
-  }
-  @include media-breakpoint-up(xxl) {
-    &:before {
-      content: "XXLarge";
-      background: #90f;
-    }
-  }
-}
+// body {
+//   padding-top: 20px;
+//   &:before {
+//     z-index: 10001;
+//     line-height: 20px;
+//     font-weight: bold;
+//     text-align: center;
+//     position: fixed;
+//     font-size: 20px;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 20px;
+//     background: limegreen;
+//     content: "Xsmall";
+//   }
+//   @include media-breakpoint-up(sm) {
+//     &:before {
+//       content: "small";
+//       background: #f00;
+//     }
+//   }
+//   @include media-breakpoint-up(md) {
+//     font-size: $font-size-base;
+//     &:before {
+//       content: "middle";
+//       background: green;
+//     }
+//   }
+//   @include media-breakpoint-up(lg) {
+//     &:before {
+//       content: "Large";
+//       background: turquoise;
+//     }
+//   }
+//   @include media-breakpoint-up(xl) {
+//     &:before {
+//       content: "XLarge";
+//       background: #f09;
+//     }
+//   }
+//   @include media-breakpoint-up(xxl) {
+//     &:before {
+//       content: "XXLarge";
+//       background: #90f;
+//     }
+//   }
+// }
+
 // Main
 .main-wrapper {
   @include textFont(400, 16px, 25px, $colorDoveGray);
   background: $backgraundWhite;
   padding: 60px 0;
-
   .border-ico {
     display: block;
     width: 108px;
@@ -60,13 +60,11 @@ body {
     border-radius: 50%;
     position: relative;
     margin: 70px auto 20px;
-    color: $colorWhite;
     background: $backgraundTurbo;
   }
   .border-ico:hover {
     border: 1px solid $colorShark;
     background: $backgraundWhite;
-    color: $colorTurbo;
   }
   .border-ico::before {
     content: "";
@@ -103,9 +101,9 @@ body {
 .article-wrapper {
   @include textFont(400, 16px, 25px, $colorWhite);
   background: $backgraundBunker;
+  padding: 60px 0;
   h2.text-color-turbo {
     color: $colorTurbo;
-    padding: 60px 0;
   }
   span {
     position: relative;
